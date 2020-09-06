@@ -66,8 +66,13 @@ public class TodaysReportServlet extends HttpServlet {
 		   todaysReportList=getReports(reportDtls);
 	
 		   request.setAttribute("dataset",new ProjectReportsUtil().getReportsDataset(todaysReportList));
-		   dispatcher=request.getRequestDispatcher("todayAllMedicinesBill.jsp");
-			dispatcher.forward(request, response);
+	//	   dispatcher=request.getRequestDispatcher("todayAllMedicinesBill.jsp");
+		   request.setAttribute("isAddCustomerActive", "");
+			request.setAttribute("isTodayReportsActive","active");
+			request.setAttribute("isAddMedicinesActive", "");
+		   request.setAttribute("isTodayAllReports","true");
+			dispatcher=request.getRequestDispatcher("medicalHomeTabsTag.jsp");
+		   dispatcher.forward(request, response);
 		   
 		}
 		// this list is appear after selecting the record from todays report list
@@ -111,7 +116,9 @@ public class TodaysReportServlet extends HttpServlet {
 		ArrayList<AbstractDtlsSDO>reportItemsSdo=new ArrayList<AbstractDtlsSDO>();
 		reportItemsSdo=getMedicines(dtls);
 		request.setAttribute("listMedicinesDataSet",new ProjectReportsUtil().getMedicinesDataset(reportItemsSdo));
-		dispatcher=request.getRequestDispatcher("generateMedicineReport.jsp");
+		request.setAttribute("isAddCustomerReport","true");
+		dispatcher=request.getRequestDispatcher("medicalHomeTabsTag.jsp");
+	//	dispatcher=request.getRequestDispatcher("generateMedicineReport.jsp");
 		dispatcher.forward(request, response);
 	}
 	

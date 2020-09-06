@@ -36,11 +36,19 @@ public class UserLoginServlet extends HttpServlet {
 			UserDaoImpl daoimpl=new UserDaoImpl();
 			PharmacyDtls dtls=new PharmacyDtls();
 			dtls=daoimpl.getUserLoginDetails(userName,passWord);
-			if(dtls.getPharmacyId()!=null) {
-				System.out.println("login success ");
-				request.getSession().setAttribute("pharmaDtls", dtls);;
-				dispatcher=request.getRequestDispatcher("medicalHome.jsp");
-				dispatcher.forward(request, response);
+			if(dtls!=null) {
+				if("Medical Representative".equalsIgnoreCase(dtls.getRoleName())) {
+					System.out.println("login success ");
+					request.getSession().setAttribute("pharmaDtls", dtls);
+					dispatcher=request.getRequestDispatcher("medicalHome.jsp");
+					dispatcher.forward(request, response);
+				}
+				if("Receptionist".equalsIgnoreCase(dtls.getRoleName())) {
+				//	request.getSession().setAttribute("pharmaDtls", dtls);
+					dispatcher=request.getRequestDispatcher("jsp/receptionistHome.jsp");
+					dispatcher.forward(request, response);
+				}
+				
 				
 			}else {
 				request.setAttribute("errorMsg","username or password not valid !");
@@ -53,7 +61,7 @@ public class UserLoginServlet extends HttpServlet {
 		
 		if(formAction.equalsIgnoreCase("LOGOUT")) {
 			request.getSession().removeAttribute("pharmaDtls");
-			dispatcher=request.getRequestDispatcher("index.jsp");
+			dispatcher=request.getRequestDispatcher("index.html");
 			dispatcher.forward(request, response);
 			
 		}

@@ -30,6 +30,7 @@ Connection conn=null;
 			dtls.setDlNo(rs.getString(7));
 			dtls.setDoctorName(rs.getString(8));
 			dtls.setUserName(rs.getString(9));
+			dtls.setRoleName(rs.getString(11));
 			
 			String totalsQuery="select sum(PAID_AMOUNT) \"paidamount\",sum(CGST_AMOUNT) \"cgstTot\",sum(SGST_AMOUNT) \"sgstTot\" ,sum(CGST_PER)\"csgtPer\",sum(SGST_PER)\"sgstPer\",count(*) \"totSaleMedicines\"from medical_report_dtls";
             PreparedStatement ps1=conn.prepareStatement(totalsQuery);

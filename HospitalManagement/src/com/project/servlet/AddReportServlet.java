@@ -58,6 +58,9 @@ public class AddReportServlet extends HttpServlet {
 		generateBillNoAndDate(request);
 	//	pdtls=daoImpl.getPharmacyDetails();
 	//	request.setAttribute("pdtls", pdtls);
+		request.setAttribute("isAddCustomerActive", "active");
+		request.setAttribute("isTodayReportsActive", "");
+		request.setAttribute("isAddMedicinesActive", "");
 		request.setAttribute("dataset", "[]");
 		request.setAttribute("formAction", "LIST_OF_MEDICINES");
 		dispatcher=request.getRequestDispatcher("/totalBills");
@@ -94,8 +97,14 @@ public class AddReportServlet extends HttpServlet {
 	    }else {
 	    	request.setAttribute("dataset",new ProjectReportsUtil().getMedicinesDataset(listSdo));	
 	    }
-		dispatcher=request.getRequestDispatcher("addYourMedicines.jsp");
-		dispatcher.forward(request, response);
+	    request.setAttribute("isAddCustomerActive", "");
+		request.setAttribute("isTodayReportsActive", "");
+		request.setAttribute("isAddMedicinesActive", "active");
+		
+	//	dispatcher=request.getRequestDispatcher("addYourMedicines.jsp");
+	    request.setAttribute("isAddAndUpdateMedicines","true");
+		dispatcher=request.getRequestDispatcher("medicalHomeTabsTag.jsp");
+	    dispatcher.forward(request, response);
 	}
 	// save and update your medicines
 	if(formAction.equalsIgnoreCase("SAVE_MEDICINES")) {

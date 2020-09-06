@@ -16,6 +16,7 @@ public class PharmacyDtls {
 	private String totSaleMedicines;
 	private String totCgstPer;
 	private String totSgstPer;
+	private String roleName;
 	public String getPharmacyId() {
 		return pharmacyId;
 	}
@@ -105,6 +106,12 @@ public class PharmacyDtls {
 	}
 	public void setTotSgstPer(String totSgstPer) {
 		this.totSgstPer = totSgstPer;
+	}
+	public String getRoleName() {
+		return roleName;
+	}
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
 	}
 	
 	

@@ -125,13 +125,14 @@
                         <span>Eiusmod tempor incididunt </span>
                         <h2>Take the world's best quality Treadment</h2>
                         <a href="#" class="primary-btn normal-btn">Contact us</a>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Hero Section End -->
-
+ 
     <!-- Consultation Section Begin -->
     <section class="consultation">
         <div class="container">
@@ -139,24 +140,26 @@
                 <div class="col-lg-4">
                     <div class="consultation__form">
                         <div class="section-title">
+                       
                             <span>REQUEST FOR YOUR</span>
                             <h2>Consultation</h2>
                         </div>
-                        <form action="#">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Email">
+                        <form action="bookAppointment" name="bookAppointmentForm">
+                        <input type="hidden" name="formAction" value="">
+                            <input type="text" name="name" placeholder="Name">
+                            <input type="number" name="phoneNo" placeholder="Phone No">
                             <div class="datepicker__item">
-                                <input type="text" placeholder="Date" class="datepicker">
+                                <input type="text" placeholder="Date" name="date" class="datepicker">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <select>
-                                <option value="">Type of service</option>
-                                <option value="">Advanced equipment</option>
-                                <option value="">Qualified doctors</option>
-                                <option value="">Certified services</option>
-                                <option value="">Emergency care</option>
+                            <select name="typeOfService">
+                                <option>Type of service</option>
+                                <option value="Advanced equipment">Advanced equipment</option>
+                                <option value="Qualified doctors">Qualified doctors</option>
+                                <option value="Certified services">Certified services</option>
+                                <option value="Emergency care">Emergency care</option>
                             </select>
-                            <button type="submit" class="site-btn">Book appoitment</button>
+                            <button type="button" onclick="bookAppointment();" class="site-btn">Book appoitment</button>
                         </form>
                     </div>
                 </div>
@@ -548,5 +551,11 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 </body>
-
+<script type="text/javascript">
+function bookAppointment() {
+	//alert("bookAppointment");
+	document.forms["bookAppointmentForm"].elements["formAction"].value="BOOK_APPOINTMENT"
+	document.forms["bookAppointmentForm"].submit();
+}
+</script>
 </html>

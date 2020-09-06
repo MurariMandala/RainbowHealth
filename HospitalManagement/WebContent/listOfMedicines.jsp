@@ -1,9 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
-<html>
-<head>
 
 <style type="text/css">
  /* Styling modal */ 
@@ -44,7 +38,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <script type="text/javascript">
-var listMedicinesDataSet=<c:out value="${listMedicinesDataSet}" escapeXml="false"/>;
+var listMedicinesDataSet=${listMedicinesDataSet}
 //var dataSet=[["DOLO650","2020B","2021-05","30","500.0"]];;
 //alert(dataSet);
  
@@ -112,8 +106,6 @@ var listMedicinesDataSet=<c:out value="${listMedicinesDataSet}" escapeXml="false
 } );
 
 </script>
-</head>
-<body>
 
 
 
@@ -132,6 +124,3 @@ var listMedicinesDataSet=<c:out value="${listMedicinesDataSet}" escapeXml="false
 		</div>
 	</div>
 </div>
-
-</body>
-</html>

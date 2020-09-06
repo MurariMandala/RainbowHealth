@@ -1,12 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
+
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-</head>
-<body>
+
 <!--  resources for datatable -->
    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
@@ -34,7 +29,4 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     
-    
-    
-</body>
-</html>
+ 
