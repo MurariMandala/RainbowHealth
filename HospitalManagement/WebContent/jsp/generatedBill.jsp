@@ -133,15 +133,15 @@ if(request.getSession().getAttribute("pharmaDtls")!=null){
                   
                  <div class="form-group">
                
-                 <p  style="font-weight: bold;"> Patient Name  :${patientName} </p>    
+                 <p  style="font-weight: bold;"> Patient Name  &nbsp;&nbsp;&nbsp;:&nbsp;${patientName} </p>    
                         </div>
             
                       <div class="form-group">
 
- <p  style="font-weight: bold;">Sales Type  :${saleType} </p>
+ <p  style="font-weight: bold;">Sales Type  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;${saleType} </p>
                         </div>
                <div class="form-group">
-             <p  style="font-weight: bold;">  Doctor Name : ${doctorName}</p>
+             <p  style="font-weight: bold;">  Doctor Name &nbsp;&nbsp;&nbsp;:&nbsp; ${doctorName}</p>
                </div>
                 
                 </div>
@@ -150,7 +150,7 @@ if(request.getSession().getAttribute("pharmaDtls")!=null){
                   <div class="form-group"> </div>
                     <div class="form-group">
                     <input type="hidden" id="billNo" name="billNo" value="${billNo}">
-                      <p  style = "position:relative; left:500px;font-weight: bold;" > Bill No :   ${billNo}</p>
+                      <p  style = "position:relative; left:500px;font-weight: bold;" > Bill No &nbsp;&nbsp;:   ${billNo}</p>
                         </div>
                        
                       <div class="form-group">
@@ -178,14 +178,14 @@ if(request.getSession().getAttribute("pharmaDtls")!=null){
 
  <table>
  <tr><td>
- <p style="font-weight: bold;"> SGST TAX   :   ${sgstAmount}
+ <p style="font-weight: bold;"> SGST TAX   :   ${sgstAmount}&nbsp;&nbsp;
 CGST TAX   :   ${cgstAmount}</p> 
 </td><td>
 <p style = "position:relative; left:500px;font-weight: bold;" >  TotAmount  :   ${totAmount} </p></td></tr>
 <tr><td>
-<p style="font-weight: bold;"> Prepared By:   ${preparedBy}</p></td>
+<p style="font-weight: bold;"> Prepared By&nbsp;:   ${preparedBy}</p></td>
 <td><p style = "position:relative; left:500px;font-weight: bold;" >  NetAmount  :   ${netAmount}</p></td></tr>
-<tr><td> <p style="font-weight: bold;">  Printed By :   ${printedBy}</p></td>
+<tr><td> <p style="font-weight: bold;">  Printed By &nbsp;&nbsp;&nbsp;:   ${printedBy}</p></td>
 <td><p style = "position:relative; left:500px;font-weight: bold;" > PaidAmount     :   ${paidAmount}</p></td>
 </tr>
 

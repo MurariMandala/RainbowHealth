@@ -13,17 +13,28 @@
 .modal-header {
   background-color: #B3B9BD;
   color: white;
-    
+    display: inherit !important;
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #8CD3FF;
+    color: #000;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
 }
 .modal-content {
     width: 1150px;
 }
 #medicines.dataTable tbody tr:hover {
-  background-color: #B3B8BD;
-    color :#FFFFFF;
+ background-color: #337ab7;
+    color :#ffff;
 }
  #medicines.dataTable thead {
-  line-height: 12px;
+line-height: 12px;
   background-color: #B3B8BD  ;
    color :#FFFFFF;
 }
@@ -114,13 +125,20 @@ var listMedicinesDataSet=${listMedicinesDataSet}
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-								
-				<h4 class="modal-title">List of Medicines</h4>	
+			
+				  <div class="col-lg-2">
+                    <div class="header__logo">
+                       <img src="img/logo.png" alt="">
+                    </div>
+                </div>	
+	
+			
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 
 			</div>
 			<div class="modal-body">
 		<table id="medicines" class="cell-border" width="100%"></table>	</div>
 		</div>
+		 <font size="4px" color="#FFF" face="sans-serif">Single click on a row to select.</font>
 	</div>
 </div>

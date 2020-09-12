@@ -40,11 +40,11 @@ public class UserLoginServlet extends HttpServlet {
 				if("Medical Representative".equalsIgnoreCase(dtls.getRoleName())) {
 					System.out.println("login success ");
 					request.getSession().setAttribute("pharmaDtls", dtls);
-					dispatcher=request.getRequestDispatcher("medicalHome.jsp");
+					dispatcher=request.getRequestDispatcher("jsp/medicalHomeTabsTag.jsp");
 					dispatcher.forward(request, response);
 				}
 				if("Receptionist".equalsIgnoreCase(dtls.getRoleName())) {
-				//	request.getSession().setAttribute("pharmaDtls", dtls);
+					request.getSession().setAttribute("pharmaDtls", dtls);
 					dispatcher=request.getRequestDispatcher("jsp/receptionistHome.jsp");
 					dispatcher.forward(request, response);
 				}

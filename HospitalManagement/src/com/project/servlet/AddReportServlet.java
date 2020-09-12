@@ -103,7 +103,7 @@ public class AddReportServlet extends HttpServlet {
 		
 	//	dispatcher=request.getRequestDispatcher("addYourMedicines.jsp");
 	    request.setAttribute("isAddAndUpdateMedicines","true");
-		dispatcher=request.getRequestDispatcher("medicalHomeTabsTag.jsp");
+		dispatcher=request.getRequestDispatcher("jsp/medicalHomeTabsTag.jsp");
 	    dispatcher.forward(request, response);
 	}
 	// save and update your medicines

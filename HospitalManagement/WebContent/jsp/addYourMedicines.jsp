@@ -22,7 +22,7 @@ if(request.getSession().getAttribute("pharmaDtls")!=null){
            
                
 <div class="consultation__form">
-<form action="addReport" name="yourMedicinesForm" method="post">
+<form action="addReport" id="form" name="yourMedicinesForm" method="post">
 <input type="hidden" name="formAction" value="">
 <input type="hidden" name="medicinesList" value="">
 <input type="hidden" name="updateMedicinesList" value="">
@@ -63,7 +63,8 @@ if(request.getSession().getAttribute("pharmaDtls")!=null){
 			  
                 </tr> <tr>     <td>
               <label class="col-md-2 control-label">Price<p id="priceError"></p></label>  
-			<input type="text" name="price" id="price" placeholder="Price" class="form-control"   ></td>
+			<input type="text" name="price" id="price" placeholder="Price" class="form-control"   >
+		</td>
  <td>
            
     
@@ -84,10 +85,42 @@ if(request.getSession().getAttribute("pharmaDtls")!=null){
 </body>
 <script type="text/javascript">
 function doSubmit() {
+	alert("submit");
+const form = document.getElementById('form');
+const price = document.getElementById('price');
+	
+	checkInputs();
+
+function checkInputs() {
+	// trim to remove the whitespaces
+	const priceValue = price.value.trim();
+	alert(priceValue);
+	
+	if(priceValue === '') {
+		setErrorFor(price, 'Price cannot be blank');
+	} else {
+		setSuccessFor(price);
+	}
+	
+}
+
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
+}
+
+
 //	alert("dosubmit");
 	
 	document.forms["yourMedicinesForm"].elements["formAction"].value="SAVE_MEDICINES";
-	document.forms["yourMedicinesForm"].submit();
+//	document.forms["yourMedicinesForm"].submit();
 }
 
 var dataset=<c:out value="${dataset}" escapeXml="false"/>;

@@ -47,6 +47,9 @@ public class TodaysReportServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String formAction=request.getParameter("formAction");
 		String formAction1 =(String) request.getAttribute("formAction");
+		if(formAction1!=null) {
+			formAction=formAction1;
+		}
 		System.out.println(formAction);
 		RequestDispatcher dispatcher;
 	
@@ -71,7 +74,7 @@ public class TodaysReportServlet extends HttpServlet {
 			request.setAttribute("isTodayReportsActive","active");
 			request.setAttribute("isAddMedicinesActive", "");
 		   request.setAttribute("isTodayAllReports","true");
-			dispatcher=request.getRequestDispatcher("medicalHomeTabsTag.jsp");
+			dispatcher=request.getRequestDispatcher("jsp/medicalHomeTabsTag.jsp");
 		   dispatcher.forward(request, response);
 		   
 		}
@@ -95,7 +98,7 @@ public class TodaysReportServlet extends HttpServlet {
 				dispatcher.forward(request, response);
 		}
 		// this will appear after saving the record 
-		if(formAction1!=null && formAction1.equalsIgnoreCase("PRESENT_REPORT")) {
+		if(formAction.equalsIgnoreCase("PRESENT_REPORT")) {
 			MedicalReportDAOImpl daoImpl=new MedicalReportDAOImpl();
 			int parentId=(int)request.getAttribute("parentId");
 			    MedicalReportDtls reportDtls=new MedicalReportDtls();
@@ -105,11 +108,11 @@ public class TodaysReportServlet extends HttpServlet {
 			    ArrayList<AbstractDtlsSDO> todaysReportList=new ArrayList<AbstractDtlsSDO>(); 
 			    todaysReportList=getReports(reportDtls);
 			    request.setAttribute("dataset",new ProjectReportsUtil().getReportsDataset(todaysReportList));
-				dispatcher=request.getRequestDispatcher("generatedBill.jsp");
+				dispatcher=request.getRequestDispatcher("jsp/generatedBill.jsp");
 				dispatcher.forward(request, response);
 		}
 //LIST_OF_MEDICINES  for popup		
-	if(formAction.equalsIgnoreCase("LIST_OF_MEDICINES")||formAction1.equalsIgnoreCase("LIST_OF_MEDICINES")) {
+	if(formAction.equalsIgnoreCase("LIST_OF_MEDICINES")) {
 		MedicalReportDAOImpl daoImpl=new MedicalReportDAOImpl();
 		MedicalReportDtls dtls=new MedicalReportDtls();
 		dtls=daoImpl.getMedicineListForPopup(request);
@@ -117,8 +120,15 @@ public class TodaysReportServlet extends HttpServlet {
 		reportItemsSdo=getMedicines(dtls);
 		request.setAttribute("listMedicinesDataSet",new ProjectReportsUtil().getMedicinesDataset(reportItemsSdo));
 		request.setAttribute("isAddCustomerReport","true");
-		dispatcher=request.getRequestDispatcher("medicalHomeTabsTag.jsp");
+		dispatcher=request.getRequestDispatcher("jsp/medicalHomeTabsTag.jsp");
 	//	dispatcher=request.getRequestDispatcher("generateMedicineReport.jsp");
+		dispatcher.forward(request, response);
+	}
+	
+	//GOTO_HOME
+	if(formAction.equalsIgnoreCase("GOTO_HOME")) {
+		request.setAttribute("isHomeActive","active");
+		dispatcher=request.getRequestDispatcher("jsp/medicalHomeTabsTag.jsp");
 		dispatcher.forward(request, response);
 	}
 	

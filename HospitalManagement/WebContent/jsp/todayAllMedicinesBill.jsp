@@ -16,16 +16,20 @@ if(request.getSession().getAttribute("pharmaDtls")!=null){
 }
 %>
 
-<div class="row">
-		<!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
 
-		<div class="container">
-		
-			<br>
-		 <table id="reportItems"  align="left" width="950px"></table>
-		</div>
-	</div>
-   
+<section class="chooseus spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="hero__text">
+              	 <table id="reportItems"  align="left" width="950px"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+  
 <br>
 </body>
 <script type="text/javascript">
