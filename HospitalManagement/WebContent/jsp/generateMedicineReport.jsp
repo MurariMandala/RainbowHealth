@@ -1,3 +1,4 @@
+
 <%
 if(request.getParameter("doctorName")!=null){
 	String doctorName = request.getParameter("doctorName");
@@ -11,11 +12,11 @@ pageContext.setAttribute("dataset", dataset);
 %>
  <jsp:include page="listOfMedicines.jsp" />
 <script type="text/javascript" src="js/addReportScript.js"></script>
-
+ <link rel="stylesheet" href="css/mdb.css" type="text/css">
 <br>
    <section class="consultation">
     
-           
+    
                
                <div class="consultation__form">
                       <form action="addReport" method="post" name="generateMedicineReportForm">
@@ -25,15 +26,16 @@ pageContext.setAttribute("dataset", dataset);
                 <div class="col-md-3 login-form-7">
            
                   
-                 <div class="form-group">
+                 <div class="md-form md-inline">
                  
-                 <input type="text"placeholder="PATIENT NAME" id="patientName" name="patientName"  value="${patientName}" />
+                 <input type="text" class="form-control" id="patientName" name="patientName"  value="${patientName}" />
+                 <label for="inputValidationEx67" data-error="wrong" data-success="right">Patient Name</label>
                         </div>
             
-                      <div class="form-group">
+                       <div class="md-form md-outline">
 
-                 <input type="text" placeholder="SALE TYPE" id="saleType" name="saleType"  value="${saleType}" />
-                         
+                 <input type="text"class="form-control"  id="saleType" name="saleType"  value="${saleType}" />
+                       <label for="inputValidationEx67" data-error="wrong" data-success="right">SALE TYPE</label>  
                         </div>
                <div class="form-group">
              <p  style="font-weight: bold;">  Doctor Name : ${doctorName}</p>
@@ -85,11 +87,19 @@ pageContext.setAttribute("dataset", dataset);
   <td> <i class="icofont-search icofont-2x" style="cursor: pointer;" href="#myModal"  data-toggle="modal" href="#myModal"  data-toggle="modal"></i></td>
   
     </tr>     <tr>          
-      <td><label class="col-md-2 control-label">Manufacture</label>
-				
-            <input type="text" name="manufacture"  id="manufacture" placeholder="Manufacture"  readonly  ></td>
-      <td> <label>Batch No</label>
-	        <input type="text" name="batchNo" id="batchNo"  placeholder="Batch No"   readonly ></td>
+      <td>
+    <div class="md-form md-outline">
+                 
+                 <input type="text" class="form-control" placeholder="Manufacture" id="manufacture" name="manufacture"  />
+                 <label for="inputValidationEx67" data-error="wrong" data-success="right">Manufacture</label>
+                        </div></td>
+      <td>
+       <div class="md-form md-outline">
+                 
+                 <input type="text" class="form-control" name="batchNo" id="batchNo" />
+                 <label for="inputValidationEx67" data-error="wrong" data-success="right">Batch No</label>
+                        </div>
+                        </td>
 
 <td><label class="col-md-2 control-label">Exp.Date</label>
 
@@ -181,7 +191,7 @@ pageContext.setAttribute("dataset", dataset);
                                  
     </section>
 
-
+<script src="js/mdb.min.js"></script>
 
 
 <script type="text/javascript">

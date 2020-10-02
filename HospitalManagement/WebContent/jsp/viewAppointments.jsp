@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,10 +22,20 @@
 
 </style>
 <body>
+<form action="bookAppointment" name="viewAppointmentsForm" method="post">
+<input type="hidden" name="formAction" value="">
+
 	<div class="row">
 		<!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
-<input type="text" class="form-control input-sm"   id='myInput' onkeyup='searchTable()' placeholder="Type to search">
 
+ <select class="selectpicker" data-style="btn-primary" name="searchOption" id="searchOption" style="display: none;">
+ 
+      <option data-icon="glyphicon glyphicon-music">Search Options</option>
+      <option value="appointMentId"  data-icon="glyphicon glyphicon-star">AppointMent Id</option>
+      <option value="phoneNo" data-icon="glyphicon glyphicon-heart">Phone No</option>
+  </select>
+  
+  <input type="text" name="search" id="search" ><button onclick="doSearch();">Search</button>
 		<div class="container">
 			
 			<br>
@@ -65,9 +76,19 @@
 
 
 
-
+</form>
 </body>
 <script type="text/javascript">
+
+function doSearch() {
+var searchOption=document.getElementById("searchOption").value;
+var search=	document.getElementById("search").value;
+//alert(searchOption);
+//alert(search);
+	document.forms["viewAppointmentsForm"].elements["formAction"].value="SEARCH";
+	document.forms["viewAppointmentsForm"].submit();
+}
+
 function searchTable() {
     var input, filter, found, table, tr, td, i, j;
     input = document.getElementById("myInput");
@@ -82,6 +103,7 @@ function searchTable() {
             }
         }
         if (found) {
+        	tr.style.display = "";
             tr[i].style.display = "";
             found = false;
         } else {

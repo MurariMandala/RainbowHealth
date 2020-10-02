@@ -73,7 +73,22 @@ public class AppointmentsServlet extends HttpServlet {
 		dispatcher=request.getRequestDispatcher("jsp/receptionistHome.jsp");
 		dispatcher.forward(request, response);
 	}
-    		
+    
+	if(formAction.equalsIgnoreCase("SEARCH")) {
+		String searchOption=request.getParameter("searchOption");
+		String input=request.getParameter("search");
+		SearchAppointMent(request,searchOption,input);
+		dispatcher=request.getRequestDispatcher("jsp/receptionistHome.jsp");
+		dispatcher.forward(request, response);
+	}
+	}
+
+	private void SearchAppointMent(HttpServletRequest request, String searchOption, String input) {
+		AppointmentDAOImpl daoImpl=new AppointmentDAOImpl();
+		List<AppointmentDtls> SearchList=daoImpl.SearchAppointMent(searchOption,input);
+		request.setAttribute("isViewAppointmentsActive", "active");
+		request.setAttribute("appointmentsList", SearchList);
+		request.setAttribute("isViewAppointments","true");
 	}
 
 	/**

@@ -85,42 +85,10 @@ if(request.getSession().getAttribute("pharmaDtls")!=null){
 </body>
 <script type="text/javascript">
 function doSubmit() {
-	alert("submit");
-const form = document.getElementById('form');
-const price = document.getElementById('price');
-	
-	checkInputs();
-
-function checkInputs() {
-	// trim to remove the whitespaces
-	const priceValue = price.value.trim();
-	alert(priceValue);
-	
-	if(priceValue === '') {
-		setErrorFor(price, 'Price cannot be blank');
-	} else {
-		setSuccessFor(price);
-	}
-	
-}
-
-function setErrorFor(input, message) {
-	const formControl = input.parentElement;
-	const small = formControl.querySelector('small');
-	formControl.className = 'form-control error';
-	small.innerText = message;
-}
-
-function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.className = 'form-control success';
-}
-
-
 //	alert("dosubmit");
 	
 	document.forms["yourMedicinesForm"].elements["formAction"].value="SAVE_MEDICINES";
-//	document.forms["yourMedicinesForm"].submit();
+	document.forms["yourMedicinesForm"].submit();
 }
 
 var dataset=<c:out value="${dataset}" escapeXml="false"/>;

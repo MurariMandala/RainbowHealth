@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mysql.cj.util.StringUtils;
 import com.project.been.objs.AppointmentDtls;
 import com.project.dbconnection.MyConnectionProvider;
 
@@ -56,6 +57,39 @@ Connection conn=null;
 	
 	
 	return dtlsList;
+	}
+	public List<AppointmentDtls> SearchAppointMent(String searchOption, String input) {
+		List<AppointmentDtls> list=new ArrayList<>();
+		StringBuffer bf=new StringBuffer();
+		String searchQuery="select BOOKKING_ID \"apntmntId\",NAME \"name\",PHONE_NO \"phone\", DATE ,TYPE_OF_SERVICE \"tos\" FROM appointment_dtls where ";
+		bf.append(searchQuery);
+		try {
+			conn=MyConnectionProvider.getConn();
+			if(!StringUtils.isNullOrEmpty(searchOption)&&searchOption.equalsIgnoreCase("appointMentId")) {
+				String Where="BOOKKING_ID like'%"+input+"%'";
+				bf.append(Where);
+			}
+			if(!StringUtils.isNullOrEmpty(searchOption)&&searchOption.equalsIgnoreCase("phoneNo")) {
+				String Where="PHONE_NO like'%"+input+"%'";
+				bf.append(Where);
+			}
+			
+			PreparedStatement ps=conn.prepareStatement(bf.toString());
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()) {
+				AppointmentDtls dtls=new AppointmentDtls();
+				dtls.setBookkingId(rs.getString("apntmntId"));
+				dtls.setName(rs.getString("name"));
+				dtls.setPhoneNo(rs.getString("phone"));
+				dtls.setDate(rs.getString("DATE"));
+				dtls.setTypeOfService(rs.getString("tos"));
+				list.add(dtls);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
 	}
 
 }
