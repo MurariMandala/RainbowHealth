@@ -1,0 +1,284 @@
+@charset "UTF-8";
+/*Button customization starts*/
+
+ button.link {
+    	-moz-user-select: text;
+    	background: none;
+    	border: none;
+    	color: teal;
+    	cursor: pointer;
+    	font-size:1.2em;
+    	margin: 0;
+    	text-align: left;
+        font-family: "Raleway", sans-serif;
+        font-weight: 510;
+	text-transform: captalize;
+	text-align: bottom;
+	height: 2em;
+/*	padding-top: 15px;*/
+	 text-decoration: underline;
+    }
+    
+    button.link:hover span {
+		 box-shadow:none;
+	background-color: rgba(0,0,0,0);
+	color: #6cf;
+    }
+.button-bottomicon-link {
+    padding:4px 13px;
+    background-color: #1C3A67;
+     color: white;
+       
+     
+}
+.btn-group.open .dropdown-toggle {
+   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  
+   
+  
+}
+.dropdown-toggle {
+    color: teal;
+    font-family: "Raleway", sans-serif;
+    text-decoration: underline;
+	font-weight: 510;
+    font-size: 1.2em;  
+   
+  
+}
+.btn-cancel {
+    background-color: #5C6F7C;
+     color: #FFFFFF;
+border: none;
+
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+	
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+}
+.btn-cancel:hover {
+    background-color: #5C6F7C;
+     color: #FFFFFF!important;
+border: none;
+
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+}
+.btn-add {
+    background-color: #5C6F7C;
+     color: #FFFFFF;
+border: none;
+
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+}
+.btn-add {
+    background-color: #5C6F7C;
+     color: #FFFFFF;
+border: none;
+
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+}
+.btn-delete {
+ background-color: #DC3545;
+    color: #FFFFFF;
+    border: none;
+   
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+}
+.btn-primary {
+     color: #FFF;
+	border-color: #2e6da4;
+	
+    font-size: medium;
+    background: teal;
+	font-family: "Raleway", sans-serif;
+
+}
+.matbill {
+    background-color: #5C6F7C;
+     color: #FFFFFF;
+border: none;
+}
+.matbill:hover{
+    background: #000033;
+}
+/*button.cancel::before {
+ font-family: "FontAwesome";
+  content: "\f046\00a0";
+}*/
+button.add::before {
+  font-family: fontAwesome;
+  content: "\f067\00a0";
+  
+}
+button.complete::before {
+ font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f560c\00a0";
+}
+button.verify::before {
+  font-family: fontAwesome;
+  content: "\f0a3\00a0";
+}
+button.prepare::before {
+ font-family: "Font Awesome 5 Free";
+  font-weight:900;
+  content: "\f56c\00a0";
+}
+button.submit::before {
+  font-family: fontAwesome;
+  content: "\f148\00a0";
+}
+button.update::before {
+  font-family: fontAwesome;
+  content: "\f044\00a0";
+}
+.btn-primary:hover{
+    background: #4D5256;
+}
+button.conform::before {
+  font-family: fontAwesome;
+  content: "\f05d\00a0";
+}
+
+button.btn.save::before {
+  font-family: fontAwesome;
+  content: "\f0c7\00a0";
+}
+button.btn.next::after {
+  font-family: fontAwesome;
+  content: "\f04e\00a0";
+    margin: 0 0px 0 6px;
+}
+button.btn.add::before {
+  font-family: fontAwesome;
+  content: "\f067\00a0";
+  
+}
+button.btn.history::before {
+  font-family: fontAwesome;
+  content: "\f1da\00a0";
+  
+}
+button.btn.details::before {
+  font-family: fontAwesome;
+  content: "\f129\00a0";
+  
+}
+
+button.btn.generate::before {
+  font-family: fontAwesome;
+  content: "\f1c3\00a0";
+}
+button.btn.min::before {
+  font-family: fontAwesome;
+  content: "\f068\00a0";
+}
+button.btn.del::before {
+  font-family: fontAwesome;
+  content: "\f014\00a0";
+}
+
+button.btn.complete::before {
+ font-family: "FontAwesome";
+  content: "\f046\00a0";
+}
+button.btn.cancel::before {
+  content: "\f2ed\00a0";
+}
+button.btn.clos::before {
+ font-family: "FontAwesome";
+  content: "\f00d\00a0";
+}
+button.btn.upload::before {
+  font-family: fontAwesome;
+  content: "\f0ee\00a0";
+}
+button.btn.refresh::before {
+  font-family: fontAwesome;
+  content: "\f021\00a0";
+}
+button.btn.search::before {
+  font-family: fontAwesome;
+  content: "\f002\00a0";
+}
+button.btn.verify::before {
+  font-family: fontAwesome;
+  content: "\f0a3\00a0";
+}
+button.btn.submit::before {
+  font-family: fontAwesome;
+  content: "\f148\00a0";
+}
+button.btn.approve::before {
+  font-family: fontAwesome;
+  content: "\f00c\00a0";
+}
+button.btn.reject::before {
+  font-family: fontAwesome;
+  content: "\f05e\00a0";
+}
+button.btn.conform::before {
+  font-family: fontAwesome;
+  content: "\f05d\00a0";
+}
+button.btn.update::before {
+  font-family: fontAwesome;
+  content: "\f044\00a0";
+}
+button.btn.prepare::before {
+ font-family: "FontAwesome";
+  content: "\f044\00a0";
+}
+
+/*Button customization ends*/
+/*  Data table customization starts*/
+
+
+/*  Data table customization ends*/
+
+.icofont-notification {
+	line-height:0;
+}
+
+ul.user-dropdown.show {
+    position: absolute !important;
+    transform: translate3d(-5px, 20px, 0px) !important; 
+    top: 17px !important;
+    left:-177px !important;
+    text-align: start;
+    padding: 20px; 
+}
+ul.dropdown-menu.dropdown-menu-large.row.show {
+    top: 42px !important;
+	left:165px!important;
+}
+.menu-hd .marg {
+	padding-top:0px !important;
+}
+.lh-0{
+	line-height:0;
+}
+ul.brdrrt.fr{
+	margin-top:5px !important;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+	font-family: "Raleway", sans-serif;
+}
+/*  Global headings starts*/
+
+/*  Global headings ends*/
+

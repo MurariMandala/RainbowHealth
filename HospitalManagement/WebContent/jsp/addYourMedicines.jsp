@@ -5,6 +5,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/mp5DetailsLayout.css" />
+<link rel="stylesheet" type="text/css" href="css/mp5GlobalStyle.css" />
   
 <script type="text/javascript" src="js/addMedicines.js"></script>
 </head>
@@ -21,12 +26,12 @@ if(request.getSession().getAttribute("pharmaDtls")!=null){
    
            
                
-<div class="consultation__form">
+
 <form action="addReport" id="form" name="yourMedicinesForm" method="post">
 <input type="hidden" name="formAction" value="">
 <input type="hidden" name="medicinesList" value="">
 <input type="hidden" name="updateMedicinesList" value="">
-
+<input type="hidden" name="medicineId" id="medicineId">
 <div class="row">
 		<!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
 
@@ -37,47 +42,66 @@ if(request.getSession().getAttribute("pharmaDtls")!=null){
 <i class="icofont-ui-delete icofont-2x" style="cursor: pointer;" name="Remove" value="Remove" id="remove" ></i>
 		</div>
 	</div>
-	
+	<div class="container-fluid">
+	  <div class="row">
+ 
+  <div class="col-md-8 ">  
+  
+<div class="col-md-12 mrn-input">
+  <div class="form-group col-md-4  ">
+  <label class="control-label">Medicine Name</label>
+<input class="form-control form-control-sm" name="medicineName" id="medicineName" type="text" />
+  </div>
+   <div class="form-group col-md-4  ">
+  <label class="control-label">Manufacture</label>
+<input class="form-control form-control-sm"name="manufacture" id="manufacture" type="text"/>
+  
+  </div>
+   <div class="form-group col-md-4  ">
+  <label class="control-label">Batch No</label>
+<input class="form-control form-control-sm"name="batchNo" id="batchNo" type="text"/>
+  
+  </div>
+  
+      <div class="form-group col-md-4  ">
+  <label class="control-label">Exp.Date</label>
+<input class="form-control form-control-sm" type="month"  min="2018-03" value="2018-05"name="expDate" id="expDate"/>
+  </div>
+   <div class="form-group col-md-4  ">
+  <label class="control-label">Quantity</label>
+<input class="form-control form-control-sm"name="qty" id="qty" type="text"/>
+  </div>
+   <div class="form-group col-md-4  ">
+  <label class="control-label">Price</label>
+<input class="form-control form-control-sm" name="price" id="price" type="text"/>
+  </div>
+   <div class="form-group col-md-8">
+  	 <div class="searchResult">
+   
+   		<div class="newEditBtn pt-2">
+   	
+									<button type="button" class="btn save btn-primary btn-sm" id="add"><span>Add</span></button>
+									
+									<button type="button" class="btn update btn-primary btn-sm" id="update" ><span>Update</span></button>
+									<button type="button" class="btn save btn-primary btn-sm" name="Upload" value="Upload" id="Upload" onclick="doSubmit()"><span>Submit</span></button>
+								
+	 </div>
+</div>
+
+ 
+</div>    
+</div></div></div></div>
 	
 
 <table>
- <tbody>
- <tr><td> <label>Medicine Name <p id="medError"></p></label>  
-     <input type="text" name="medicineName" id="medicineName" placeholder="Medicine Name" class="form-control" >
-     <input type="hidden" name="medicineId" id="medicineId" placeholder="Medicine ID" class="form-control" ></td>
-      <td><label class="col-md-2 control-label">Manufacture</label>
-				
-            <input type="text" name="manufacture" id="manufacture" placeholder="Manufacture" class="form-control" ></td>
-      <td> <label>Batch No</label>
-	        <input type="text" name="batchNo" id="batchNo" placeholder="Batch No" class="form-control"  ></td>
-      <td>
-      <label class="col-md-2 control-label">Exp.Date</label>
 
-<input type="month"  min="2018-03" value="2018-05"name="expDate" id="expDate" placeholder="Exp.Date" class="form-control"   >
-     
-          </td>
-            			<td>
-			 <label class="col-md-2 control-label">Quantity<p id="qtyError"></p></label>  
-			<input type="number" name="qty" id="qty" placeholder="Quantity" class="form-control"   >
-			</td> 
-			  
-                </tr> <tr>     <td>
-              <label class="col-md-2 control-label">Price<p id="priceError"></p></label>  
-			<input type="text" name="price" id="price" placeholder="Price" class="form-control"   >
-		</td>
- <td>
-           
-    
- 
-  <button class="btn btn-success" class="add" id="add">Add <i class="icofont-medicine"></i></button>
-  <button class="btn btn-primary" class="update" id="update"> Update  <i class="icofont-pen-alt-4"></i></button></td> </tr>     
  </tbody>    	
  
  </table>
-<button class="btn btn-success" type="button" onclick="doSubmit()">Submit  <i class="icofont-share-alt icofont-1x"></i></button>
+
 
 </form>
-  </div>
+
   </section>
 <br>
 </body>

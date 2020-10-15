@@ -36,7 +36,7 @@
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="index.jsp"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__btn">
@@ -83,25 +83,25 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="index.jsp"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
                     <div class="header__menu__option">
                         <nav class="header__menu">
                             <ul>
-                                <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a href="./about.html">About</a></li>
-                                <li><a href="./services.html">Services</a></li>
+                                <li class="active"><a href="index.jsp">Home</a></li>
+                                <li><a href="about.jsp">About</a></li>
+                                <li><a href="services.jsp">Services</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
-                                        <li><a href="./pricing.html">Pricing</a></li>
-                                        <li><a href="./doctor.html">Doctor</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                        <li><a href="pricing.jsp">Pricing</a></li>
+                                        <li><a href="doctor.jsp">Doctor</a></li>
+                                        <li><a href="blog-details.jsp">Blog Details</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./blog.html">News</a></li>
-                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="blog.jsp">News</a></li>
+                                <li><a href="contact.jsp">Contact</a></li>
                             </ul>
                         </nav>
                         <div class="header__btn">

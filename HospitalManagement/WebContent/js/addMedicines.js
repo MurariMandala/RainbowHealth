@@ -281,7 +281,8 @@ const app = {
            { title: "Batch No" },
            { title: "Exp.Date" },
            { title: "Quantity" },
-           { title: "Price" }
+           { title: "Price" },
+           { title: "Action" }
         
       	 
       ]

@@ -63,7 +63,7 @@ if(request.getAttribute("isAddMedicinesActive")!=null){
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="index.jsp"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__btn">
@@ -110,7 +110,7 @@ if(request.getAttribute("isAddMedicinesActive")!=null){
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="index.jsp"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -121,7 +121,7 @@ if(request.getAttribute("isAddMedicinesActive")!=null){
                                 <li class="${isAddCustomerActive}" ><a href="/HospitalManagement/addReport?formAction=GOTO_REPORT">Add Customer Report</a></li>
                                 <li  class="${isTodayReportsActive}"><a href="/HospitalManagement/totalBills?formAction=GOTO_TODAT_REPORT">Today Reports</a></li>
                                 <li  class="${isAddMedicinesActive}"><a href="/HospitalManagement/addReport?formAction=LIST_MEDICINES">Add Your Medicines</a></li>
-                               
+                               <li><a href="jsp/dashboard.jsp">Dashboard</a></li>
                             </ul>
                         </nav>
                         <div class="header__btn">

@@ -35,7 +35,7 @@
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="index.jsp"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__btn">
@@ -82,25 +82,25 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="index.jsp"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
                     <div class="header__menu__option">
                         <nav class="header__menu">
                             <ul>
-                                <li><a href="./index.html">Home</a></li>
-                                <li><a href="./about.html">About</a></li>
-                                <li><a href="./services.html">Services</a></li>
-                                <li><a href="#">Pages</a>
+                                <li><a href="index.jsp">Home</a></li>
+                                <li><a href="about.jsp">About</a></li>
+                                <li><a href="services.jsp">Services</a></li>
+                                <li class="active"><a href="#">Pages</a>
                                     <ul class="dropdown">
-                                        <li><a href="./pricing.html">Pricing</a></li>
-                                        <li><a href="./doctor.html">Doctor</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                        <li><a href="pricing.jsp">Pricing</a></li>
+                                        <li><a href="doctor.jsp">Doctor</a></li>
+                                        <li><a href="blog-details.jsp">Blog Details</a></li>
                                     </ul>
                                 </li>
-                                <li class="active"><a href="./blog.html">News</a></li>
-                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="blog.jsp">News</a></li>
+                                <li><a href="contact.jsp">Contact</a></li>
                             </ul>
                         </nav>
                         <div class="header__btn">
@@ -122,10 +122,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>News</h2>
+                        <h2>Our Prices</h2>
                         <div class="breadcrumb__links">
-                            <a href="./index.html">Home</a>
-                            <span>News</span>
+                            <a href="index.jsp">Home</a>
+                            <span>Pricing</span>
                         </div>
                     </div>
                 </div>
@@ -134,145 +134,95 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <!-- Blog Section Begin -->
-    <section class="blog spad">
+    <!-- Pricing Section Begin -->
+    <section class="pricing spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-1.jpg" alt="">
+                    <div class="pricing__item">
+                        <div class="pricing__item__title">
+                            <p>BREASTS</p>
+                            <h3>Dr. Laura Leon <span>Plastic surgeon</span></h3>
                         </div>
-                        <div class="blog__item__text">
-                            <h5><a href="#">Here’s how you can get a natural glow this party season</a></h5>
-                            <ul>
-                                <li><img src="img/blog/blog-author.jpg" alt=""> John Doe</li>
-                                <li>Dec 06, 2019</li>
-                            </ul>
-                        </div>
+                        <ul>
+                            <li>
+                                <h6>Belt Lipectomy (Body Lift)</h6>
+                                <span>$14,630</span>
+                            </li>
+                            <li>
+                                <h6>Brachioplasty (Arm Lift)</h6>
+                                <span>$7,750</span>
+                            </li>
+                            <li>
+                                <h6>Liposuction (Whole Body)</h6>
+                                <span>$3,550 – 8,500</span>
+                            </li>
+                            <li>
+                                <h6>Thigh / Buttock Lift</h6>
+                                <span>$10,100</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="primary-btn">Book now</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-2.jpg" alt="">
+                    <div class="pricing__item">
+                        <div class="pricing__item__title">
+                            <p>Body contouring</p>
+                            <h3>Dr. John Doe <span>Plastic surgeon</span></h3>
                         </div>
-                        <div class="blog__item__text">
-                            <h5><a href="#">Get better skin with these top 10 tips for skin care</a></h5>
-                            <ul>
-                                <li><img src="img/blog/blog-author.jpg" alt=""> John Doe</li>
-                                <li>Dec 06, 2019</li>
-                            </ul>
-                        </div>
+                        <ul>
+                            <li>
+                                <h6>Belt Lipectomy (Body Lift)</h6>
+                                <span>$14,630</span>
+                            </li>
+                            <li>
+                                <h6>Brachioplasty (Arm Lift)</h6>
+                                <span>$7,750</span>
+                            </li>
+                            <li>
+                                <h6>Liposuction (Whole Body)</h6>
+                                <span>$3,550 – 8,500</span>
+                            </li>
+                            <li>
+                                <h6>Thigh / Buttock Lift</h6>
+                                <span>$10,100</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="primary-btn">Book now</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-3.jpg" alt="">
+                    <div class="pricing__item">
+                        <div class="pricing__item__title">
+                            <p>FACIAL PROCEDURES</p>
+                            <h3>Dr. Manuel Benet <span>Plastic surgeon</span></h3>
                         </div>
-                        <div class="blog__item__text">
-                            <h5><a href="#">8 Ways to Save Your Skin if You Exercise Outside This Winter</a></h5>
-                            <ul>
-                                <li><img src="img/blog/blog-author.jpg" alt=""> John Doe</li>
-                                <li>Dec 06, 2019</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-4.jpg" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <h5><a href="#">Here’s how you can get a natural glow this party season</a></h5>
-                            <ul>
-                                <li><img src="img/blog/blog-author.jpg" alt=""> John Doe</li>
-                                <li>Dec 06, 2019</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-5.jpg" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <h5><a href="#">Get better skin with these top 10 tips for skin care</a></h5>
-                            <ul>
-                                <li><img src="img/blog/blog-author.jpg" alt=""> John Doe</li>
-                                <li>Dec 06, 2019</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-6.jpg" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <h5><a href="#">8 Ways to Save Your Skin if You Exercise Outside This Winter</a></h5>
-                            <ul>
-                                <li><img src="img/blog/blog-author.jpg" alt=""> John Doe</li>
-                                <li>Dec 06, 2019</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-7.jpg" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <h5><a href="#">Here’s how you can get a natural glow this party season</a></h5>
-                            <ul>
-                                <li><img src="img/blog/blog-author.jpg" alt=""> John Doe</li>
-                                <li>Dec 06, 2019</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-8.jpg" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <h5><a href="#">Get better skin with these top 10 tips for skin care</a></h5>
-                            <ul>
-                                <li><img src="img/blog/blog-author.jpg" alt=""> John Doe</li>
-                                <li>Dec 06, 2019</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-9.jpg" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <h5><a href="#">8 Ways to Save Your Skin if You Exercise Outside This Winter</a></h5>
-                            <ul>
-                                <li><img src="img/blog/blog-author.jpg" alt=""> John Doe</li>
-                                <li>Dec 06, 2019</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <div class="load__more">
-                        <a href="#" class="primary-btn">Load More</a>
+                        <ul>
+                            <li>
+                                <h6>Belt Lipectomy (Body Lift)</h6>
+                                <span>$14,630</span>
+                            </li>
+                            <li>
+                                <h6>Brachioplasty (Arm Lift)</h6>
+                                <span>$7,750</span>
+                            </li>
+                            <li>
+                                <h6>Liposuction (Whole Body)</h6>
+                                <span>$3,550 – 8,500</span>
+                            </li>
+                            <li>
+                                <h6>Thigh / Buttock Lift</h6>
+                                <span>$10,100</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="primary-btn">Book now</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Blog Section End -->
+    <!-- Pricing Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer">

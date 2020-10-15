@@ -61,7 +61,7 @@ public class UserLoginServlet extends HttpServlet {
 		
 		if(formAction.equalsIgnoreCase("LOGOUT")) {
 			request.getSession().removeAttribute("pharmaDtls");
-			dispatcher=request.getRequestDispatcher("index.html");
+			dispatcher=request.getRequestDispatcher("index.jsp");
 			dispatcher.forward(request, response);
 			
 		}

@@ -41,9 +41,7 @@ line-height: 12px;
 
   #medicines tr td { 
   	line-height: 12px; }
- #myModal {
 
-}
 </style>
 
 <meta charset="ISO-8859-1">

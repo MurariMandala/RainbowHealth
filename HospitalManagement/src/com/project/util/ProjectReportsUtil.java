@@ -1,8 +1,11 @@
 package com.project.util;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import com.project.been.objs.AppointmentDtls;
 import com.project.sdo.AbstractDtlsSDO;
+import com.project.sdo.AppointmentsSDO;
 import com.project.sdo.ReportItemsSDO;
 
 public class ProjectReportsUtil {
@@ -49,8 +52,9 @@ public class ProjectReportsUtil {
 			.append("\""+sdo.getBatchNo()+"\",")
 			.append("\""+sdo.getExpDate()+"\",")
 			.append("\""+sdo.getQty()+"\",")
-			.append("\""+sdo.getItemPrice()+"\"]");
-			
+			.append("\""+sdo.getItemPrice()+"\",")
+			.append("\"<button>View</button>\",") //9
+			.append("\""+"\"]");	//10
 			if(i<reportItemsSdo.size()-1) {
 				buff.append(",");
 			}
@@ -59,6 +63,32 @@ public class ProjectReportsUtil {
 		buff.append("]");
 		System.out.println("Medicines Json :"+buff.toString());
 	}
+		return buff.toString();
+	}
+
+	public String getAllAppointments(ArrayList<AbstractDtlsSDO> appointmentsList) {
+		StringBuffer buff =new StringBuffer();
+		buff.append("[");
+		if(appointmentsList.size()>0) {
+			for(int i=0;i<appointmentsList.size();i++) {
+				AppointmentsSDO sdo=(AppointmentsSDO)appointmentsList.get(i);
+				buff.append("[")
+				
+				.append("\""+sdo.getBookkingId()+"\",")
+				.append("\""+sdo.getName()+"\",")
+				.append("\""+sdo.getPhoneNo()+"\",")
+				.append("\""+sdo.getTypeOfService()+"\",")
+				.append("\""+sdo.getDate()+"\",")
+				//.append("\"<button>View</button>\",") //9
+				.append("\""+"\"]");	//10
+				if(i<appointmentsList.size()-1) {
+					buff.append(",");
+				}
+			}
+			buff.append("]");
+			System.out.println("Appointment Json :"+buff.toString());
+		}
+		
 		return buff.toString();
 	}
 

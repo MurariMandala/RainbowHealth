@@ -154,18 +154,7 @@ public class TodaysReportServlet extends HttpServlet {
 		return itemsArr;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	private ArrayList<AbstractDtlsSDO> getReports(MedicalReportDtls reportDtls) {
 		ArrayList<AbstractDtlsSDO> dtlsSdo=new ArrayList<AbstractDtlsSDO>();

@@ -13,21 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aesthetic</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+ <jsp:include page="allImports.jsp"></jsp:include>
+   
 </head>
 <body>
 <%
@@ -45,10 +32,7 @@ if(request.getAttribute("isViewAppointmentsActive")!=null){
 	pageContext.setAttribute("isViewAppointmentsActive", isViewAppointmentsActive);
 }
 %>
-<form action="bookAppointment" name="receptionistHomeForm" method="post">
-<input type="hidden" name="formAction" value="">
 
-</form>
 
     <!-- Page Preloder -->
     <div id="preloder">
@@ -59,7 +43,7 @@ if(request.getAttribute("isViewAppointmentsActive")!=null){
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="index.jsp"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__btn">
@@ -106,7 +90,7 @@ if(request.getAttribute("isViewAppointmentsActive")!=null){
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="index.jsp"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -114,8 +98,8 @@ if(request.getAttribute("isViewAppointmentsActive")!=null){
                         <nav class="header__menu">
                             <ul>
                                 <li class="${isHomeActive}"><a href="#">Home</a></li>
-                                <li class="${isViewAppointmentsActive}"><a href="#" onclick="viewAppointments()">View Appointments</a></li>
-                                
+                            <li class="${isViewAppointmentsActive}"><a href="/HospitalManagement/bookAppointment?formAction=VIEW_APPOINTMENTS">View Appointments</a></li>
+                            
                             </ul>
                         </nav>
                         <div class="header__btn">
@@ -267,15 +251,4 @@ if(request.getAttribute("isViewAppointmentsActive")!=null){
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 </body>
-<script type="text/javascript">
-function doLogin() {
-	document.forms["loginForm"].elements["formAction"].value="LOGIN";
-	document.forms["loginForm"].submit();
-}
-function viewAppointments(){
-	//alert("1");
-	document.forms["receptionistHomeForm"].elements["formAction"].value="VIEW_APPOINTMENTS";
-document.forms["receptionistHomeForm"].submit();
-   }
-</script>
 </html>

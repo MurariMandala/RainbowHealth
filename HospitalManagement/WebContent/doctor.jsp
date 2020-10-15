@@ -35,7 +35,7 @@
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="index.jsp"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__btn">
@@ -82,25 +82,25 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="index.jsp"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
                     <div class="header__menu__option">
                         <nav class="header__menu">
                             <ul>
-                                <li><a href="./index.html">Home</a></li>
-                                <li><a href="./about.html">About</a></li>
-                                <li><a href="./services.html">Services</a></li>
-                                <li><a href="#">Pages</a>
+                                <li><a href="index.jsp">Home</a></li>
+                                <li><a href="about.jsp">About</a></li>
+                                <li><a href="services.jsp">Services</a></li>
+                                <li class="active"><a href="#">Pages</a>
                                     <ul class="dropdown">
-                                        <li><a href="./pricing.html">Pricing</a></li>
-                                        <li><a href="./doctor.html">Doctor</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                        <li><a href="pricing.jsp">Pricing</a></li>
+                                        <li><a href="doctor.jsp">Doctor</a></li>
+                                        <li><a href="blog-details.jsp">Blog Details</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./blog.html">News</a></li>
-                                <li class="active"><a href="./contact.html">Contact</a></li>
+                                <li><a href="blog.jsp">News</a></li>
+                                <li><a href="contact.jsp">Contact</a></li>
                             </ul>
                         </nav>
                         <div class="header__btn">
@@ -122,10 +122,11 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Contact Us</h2>
+                        <h2>Our team</h2>
                         <div class="breadcrumb__links">
-                            <a href="./index.html">Home</a>
-                            <span>Contact</span>
+                            <a href="index.jsp">Home</a>
+                            <a href="about.jsp">About</a>
+                            <span>Doctor</span>
                         </div>
                     </div>
                 </div>
@@ -134,68 +135,132 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <!-- Contact Section Begin -->
-    <section class="contact spad">
+    <!-- Doctor Section Begin -->
+    <section class="doctor spad">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="contact__widget">
-                        <div class="contact__widget__icon">
-                            <i class="fa fa-map-marker"></i>
-                        </div>
-                        <div class="contact__widget__text">
-                            <h5>Address</h5>
-                            <p>tr nagar jenda road Hno:9-8-2</p>
+            <div class="doctor__item">
+                <div class="row">
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="doctor__item__pic">
+                            <img src="img/doctor/doctor-1.jpg" alt="">
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="contact__widget">
-                        <div class="contact__widget__icon">
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <div class="contact__widget__text">
-                            <h5>Hotline</h5>
-                            <p>9666689168 • 1-688-356-66889</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="contact__widget">
-                        <div class="contact__widget__icon">
-                            <i class="fa fa-envelope"></i>
-                        </div>
-                        <div class="contact__widget__text">
-                            <h5>Email</h5>
-                            <p>mandalamurari@gmail.com</p>
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="doctor__item__text">
+                            <span>MBBS, MRCP(UK), CCST(DERM)</span>
+                            <h2>Dr Emili Craythorne</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                            gravida. Risus commodo viverra maecenas accumsan.sis. </p>
+                            <ul>
+                                <li><i class="fa fa-check-circle"></i> Routine and medical care</li>
+                                <li><i class="fa fa-check-circle"></i> Excellence in Healthcare every</li>
+                                <li><i class="fa fa-check-circle"></i> Building a healthy environment</li>
+                                <li><i class="fa fa-check-circle"></i> cumsan lacus vel facilisis.</li>
+                            </ul>
+                            <div class="doctor__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="contact__content">
+            <div class="doctor__item">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="contact__pic">
-                            <img src="img/contact-pic.jpg" alt="">
+                    <div class="col-lg-6 order-lg-4">
+                        <div class="doctor__item__pic">
+                            <img src="img/doctor/doctor-2.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="contact__form">
-                            <h3>Get in touch</h3>
-                            <form action="#">
-                                <input type="text" placeholder="Name">
-                                <input type="text" placeholder="Email">
-                                <input type="text" placeholder="Website">
-                                <textarea placeholder="Message"></textarea>
-                                <button type="submit" class="site-btn">Send Message</button>
-                            </form>
+                    <div class="col-lg-6 order-lg-3">
+                        <div class="doctor__item__text  doctor__item__text--left">
+                            <span>MBBS, MRCP(UK), CCST(DERM)</span>
+                            <h2>Dr Jessica Jones</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                            gravida. Risus commodo viverra maecenas accumsan.sis. </p>
+                            <ul>
+                                <li><i class="fa fa-check-circle"></i> Routine and medical care</li>
+                                <li><i class="fa fa-check-circle"></i> Excellence in Healthcare every</li>
+                                <li><i class="fa fa-check-circle"></i> Building a healthy environment</li>
+                                <li><i class="fa fa-check-circle"></i> cumsan lacus vel facilisis.</li>
+                            </ul>
+                            <div class="doctor__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="doctor__item">
+                <div class="row">
+                    <div class="col-lg-6 order-lg-5">
+                        <div class="doctor__item__pic">
+                            <img src="img/doctor/doctor-3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-6">
+                        <div class="doctor__item__text">
+                            <span>MBBS, MRCP(UK), CCST(DERM)</span>
+                            <h2>Dr Ahel Natasha</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                            gravida. Risus commodo viverra maecenas accumsan.sis. </p>
+                            <ul>
+                                <li><i class="fa fa-check-circle"></i> Routine and medical care</li>
+                                <li><i class="fa fa-check-circle"></i> Excellence in Healthcare every</li>
+                                <li><i class="fa fa-check-circle"></i> Building a healthy environment</li>
+                                <li><i class="fa fa-check-circle"></i> cumsan lacus vel facilisis.</li>
+                            </ul>
+                            <div class="doctor__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="doctor__item">
+                <div class="row">
+                    <div class="col-lg-6 order-lg-8">
+                        <div class="doctor__item__pic">
+                            <img src="img/doctor/doctor-4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-7">
+                        <div class="doctor__item__text doctor__item__text--left">
+                            <span>MBBS, MRCP(UK), CCST(DERM)</span>
+                            <h2>Dr Gabriela Beckett</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                            gravida. Risus commodo viverra maecenas accumsan.sis. </p>
+                            <ul>
+                                <li><i class="fa fa-check-circle"></i> Routine and medical care</li>
+                                <li><i class="fa fa-check-circle"></i> Excellence in Healthcare every</li>
+                                <li><i class="fa fa-check-circle"></i> Building a healthy environment</li>
+                                <li><i class="fa fa-check-circle"></i> cumsan lacus vel facilisis.</li>
+                            </ul>
+                            <div class="doctor__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact Section End -->
+    <!-- Doctor Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer">
@@ -277,7 +342,11 @@
                     <div class="col-lg-7">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         <div class="footer__copyright__text">
-                            <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                            <p>Copyright &copy; <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This template is made with <i class="fa fa-heart"
+                            aria-hidden="true"></i> by <a href="https://colorlib.com"
+                            target="_blank">Colorlib</a></p>
                         </div>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </div>

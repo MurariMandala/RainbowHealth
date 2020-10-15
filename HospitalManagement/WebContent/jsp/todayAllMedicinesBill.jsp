@@ -29,7 +29,13 @@ if(request.getSession().getAttribute("pharmaDtls")!=null){
         </div>
     </section>
     
-  
+  <div class="form-group row">
+ <label for="staticEmail" class="col-sm-0 col-form-label">Email</label>
+ <div class="col-sm-10">
+ <input type="text" class="form-control-plaintext" id="staticEmail"
+value="email@example.com">
+ </div>
+ </div>
 <br>
 </body>
 <script type="text/javascript">

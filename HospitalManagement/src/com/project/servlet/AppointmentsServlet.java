@@ -1,6 +1,7 @@
 package com.project.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -13,6 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.project.been.objs.AppointmentDtls;
 import com.project.daoImpl.AppointmentDAOImpl;
+import com.project.sdo.AbstractDtlsSDO;
+import com.project.sdo.AppointmentsSDO;
+import com.project.util.ProjectReportsUtil;
 
 /**
  * Servlet implementation class BookAppointmentServlet
@@ -58,17 +62,21 @@ public class AppointmentsServlet extends HttpServlet {
 		AppointmentDAOImpl dao=new AppointmentDAOImpl();
 		dao.bookAppointment(dtls);
 		request.setAttribute("status","suucessfully submitted your appointment...");
-		dispatcher=request.getRequestDispatcher("index.html");
+		request.setAttribute("appointMentId", "your appointment Id : "+bookkingId+"");
+		request.setAttribute("isModel", "true");
+		dispatcher=request.getRequestDispatcher("index.jsp");
 		dispatcher.forward(request, response);
 	}
 	
 	if(formAction.equalsIgnoreCase("VIEW_APPOINTMENTS")) {
-	
+		 ArrayList<AbstractDtlsSDO> appointmentsList=new ArrayList<AbstractDtlsSDO>(); 
 		AppointmentDAOImpl dao=new AppointmentDAOImpl();
 		int latest=1;
 		List<AppointmentDtls> list=dao.viewAppointments(latest);
+		appointmentsList=getAppointmentsList(list);
+		request.setAttribute("appointmentDataSet",new ProjectReportsUtil().getAllAppointments(appointmentsList));
+		//request.setAttribute("appointmentDataSet","[]");
 		request.setAttribute("isViewAppointmentsActive", "active");
-		request.setAttribute("appointmentsList", list);
 		request.setAttribute("isViewAppointments","true");
 		dispatcher=request.getRequestDispatcher("jsp/receptionistHome.jsp");
 		dispatcher.forward(request, response);
@@ -81,6 +89,23 @@ public class AppointmentsServlet extends HttpServlet {
 		dispatcher=request.getRequestDispatcher("jsp/receptionistHome.jsp");
 		dispatcher.forward(request, response);
 	}
+	}
+
+	private ArrayList<AbstractDtlsSDO> getAppointmentsList(List<AppointmentDtls> list) {
+		ArrayList<AbstractDtlsSDO> dtlsSdo=new ArrayList<AbstractDtlsSDO>();
+	if(list.size()>0 && list!=null) {
+		for(int i=0;i<list.size();i++) {
+			AppointmentsSDO sdo=new AppointmentsSDO();
+			AppointmentDtls dtls=list.get(i);
+			sdo.setBookkingId(dtls.getBookkingId());
+			sdo.setName(dtls.getName());
+			sdo.setPhoneNo(dtls.getPhoneNo());
+			sdo.setDate(dtls.getDate());
+			sdo.setTypeOfService(dtls.getTypeOfService());
+			dtlsSdo.add(sdo);
+		}
+	}
+		return dtlsSdo;
 	}
 
 	private void SearchAppointMent(HttpServletRequest request, String searchOption, String input) {
